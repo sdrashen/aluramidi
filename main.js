@@ -19,10 +19,6 @@ for (let cont = 0; cont < listaDeTeclas.length; cont++) {
         if(evento.code === 'Space' || 'Enter') {
             tecla.classList.add('ativa');
         }
-
-        if (evento.code === 'Enter') {
-            tecla.classList.add('ativa');
-        }
     }
 
     tecla.onkeyup = () => { 
