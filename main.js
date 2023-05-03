@@ -14,11 +14,18 @@ for (let cont = 0; cont < listaDeTeclas.length; cont++) {
         tocaSom(idAudio);
     }    
     
-    tecla.onkeydown = function () {  //inserção de classes no js
-        tecla.classList.add('ativa');
+    tecla.onkeydown = function (evento) {
+        
+        if(evento.code === 'Space' || 'Enter') {
+            tecla.classList.add('ativa');
+        }
+
+        if (evento.code === 'Enter') {
+            tecla.classList.add('ativa');
+        }
     }
 
-    tecla.onkeyup = () => { //remoção de classes no js
+    tecla.onkeyup = () => { 
         tecla.classList.remove('ativa');
     }
 
