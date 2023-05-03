@@ -14,6 +14,12 @@ for (let cont = 0; cont < listaDeTeclas.length; cont++) {
         tocaSom(idAudio);
     }    
     
-}
+    tecla.onkeydown = function () {  //inserção de classes no js
+        tecla.classList.add('ativa');
+    }
 
-//Para evitar repetição de código (cont), criamos uma const para a tecla.
+    tecla.onkeyup = () => { //remoção de classes no js
+        tecla.classList.remove('ativa');
+    }
+
+}
